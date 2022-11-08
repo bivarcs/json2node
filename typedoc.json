@@ -1,0 +1,22 @@
+{
+  "entryPoints": [
+    "src/js/Json2Node/class.ts",
+    "src/js/Emitter/class.ts"
+  ],
+  "navigationLinks": {
+    "Github": "https://github.com/bivarcs/json2node",
+    "Demo": "https://bivarcs.github.io/json2node/demo/"
+  },
+  "sidebarLinks": {
+    "Github": "https://github.com/bivarcs/json2node",
+    "Demo": "https://bivarcs.github.io/json2node/demo/"
+  },
+  "sourceLinkTemplate": "https://github.com/bivarcs/json2node/blob/main/{path}#L{line}",
+  "out": "./docs/docs",
+  "visibilityFilters": {
+    "protected": true,
+    "private": true,
+    "inherited": true,
+    "external": true,
+  }
+}
