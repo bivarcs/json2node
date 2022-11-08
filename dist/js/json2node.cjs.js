@@ -1,10 +1,12 @@
-/*! @bivarcs/json2node 0.0.1 | MIT | https://github.com/bivarcs/json2node */
+/*! @bivarcs/json2node 0.0.2 | MIT | https://github.com/bivarcs/json2node */
 'use strict';
 
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
 var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
 var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __propIsEnum = Object.prototype.propertyIsEnumerable;
@@ -21,6 +23,7 @@ var __spreadValues = (a, b) => {
   }
   return a;
 };
+var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 class Emitter {
   constructor(options) {
     this.Emitter$entries = {};
@@ -55,18 +58,21 @@ class Emitter {
   }
   emit(type, data) {
     let entries = this.Emitter$entries;
-    if (entries[type]) {
+    let event = __spreadProps(__spreadValues({}, data && "object" === typeof data && !Array.isArray(data) ? data : {
+      data
+    }), {
+      type,
+      target: this
+    });
+    if (entries[type] && entries[type].length) {
       entries[type].forEach(entry => {
-        entry[1]({
-          data,
-          target: this,
-          type
-        });
+        entry[1](event);
         if (entry[2].once) {
           this.off(type, entry[1]);
         }
       });
     }
+    return event;
   }
   destroy() {
     this.Emitter$entries = {};

@@ -1,6 +1,6 @@
 {
   "name": "@bivarcs/json2node",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convert JSON to Node.",
   "author": "bivarcs <bivarcs@gmail.com> (https://github.com/bivarcs)",
   "license": "MIT",
@@ -25,7 +25,7 @@
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@babel/preset-env": "^7.19.4",
-    "@bivarcs/emitter": ">=0.0.6",
+    "@bivarcs/emitter": ">=0.0.7",
     "@rollup/plugin-babel": "^6.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@types/jest": "^29.2.2",
