@@ -43,7 +43,8 @@ yarn: `yarn add @bivarcs/json2node`
 A command is needed to prepare dependent libraries.
 
 ```
-npm run src:setup
+npm run dev:setup
+yarn run dev:setup
 ```
 
 ### CDN

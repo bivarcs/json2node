@@ -44,7 +44,7 @@
     "uglify-js": "^3.17.4"
   },
   "scripts": {
-    "src:setup": "node scripts/setup.js",
+    "dev:setup": "node scripts/setup.js",
     "build:scripts": "node scripts/build-scripts.js",
     "build:modules": "node scripts/build-modules.js",
     "build:types": "node scripts/build-types.js",
